@@ -7,14 +7,15 @@ let today = new Date();
 let date =
   today.getDate() + "." + (today.getMonth() + 1) + "." + today.getFullYear();
 
-let actual_time = new Date();
 let time = today.getHours() + ":" + today.getMinutes();
 
 const Footer: React.FC = () => {
   return (
     <footer>
       <div className="grid grid-cols-12 gap-2 mx-10">
-        <div>Liczba artykułów na stronie:</div>
+        <div className="col-start-1 col-end-5">
+          Liczba artykułów na stronie:
+        </div>
         <div className="col-start-5 col-end-10"></div>
         <div className={styles.icons}>
           <MdDateRange /> {date}
