@@ -1,0 +1,13 @@
+.navbar {
+  height: 100vh;
+}
+
+.navbar ul {
+  list-style: none;
+  flex-direction: column;
+  height: 80%;
+}
+
+.navbar li {
+  display: flex;
+}
