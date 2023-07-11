@@ -4,12 +4,19 @@ import england from "../../public/flags/united-kingdom.svg";
 import france from "../../public/flags/france.svg";
 import germany from "../../public/flags/germany.svg";
 
+import { TiArrowRightOutline } from "react-icons/ti";
+
 import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className={`fixed w-20 ${styles.navbar}`}>
-      <p>Countries</p>
+    <nav className={`fixed w-24 my-16 ${styles.navbar}`}>
+      <div className={styles.arrow}>
+        <p>Countries</p>
+        <span>
+          <TiArrowRightOutline size={35} />
+        </span>
+      </div>
       <ul className="flex p-0 m-0">
         <li className="space-x-2">
           <Image src={poland} width={10} height={10} alt="Poland flag" />
