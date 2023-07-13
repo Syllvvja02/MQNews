@@ -1,6 +1,6 @@
-const getNews = async () => {
+const getNews = async ({ id }: any) => {
   const res = await fetch(
-    "https://newsapi.org/v2/top-headlines?country=pl&apiKey=b1c4ac6fc9a84967b2c3c7092e03db3a",
+    `https://newsapi.org/v2/top-headlines?country=${id}&apiKey=b1c4ac6fc9a84967b2c3c7092e03db3a`,
     {
       method: "GET",
       headers: {
@@ -12,7 +12,9 @@ const getNews = async () => {
 };
 
 const Country = async ({ params }: any) => {
-  const news = await getNews();
+  const news = await getNews(params);
+  console.log(typeof params.id);
+
   console.log(news);
   const articles = news.articles;
   return (
