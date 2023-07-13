@@ -1,6 +1,6 @@
 .navbar {
   height: 100vh;
-  transition: width 800ms ease;
+  transition: width 800ms ease-in-out;
 }
 
 .navbar ul {
@@ -30,6 +30,7 @@
 .arrow span {
   transform: rotate(0deg);
   transition: 800ms;
+  padding-left: 2rem;
 }
 
 .navbar:hover .arrow span {
