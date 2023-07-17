@@ -24,7 +24,7 @@ const Button = ({
   variant,
   square,
   paddingLess,
-  href,
+  href = "",
   type = "button",
   ...props
 }: IButtonProps) => {

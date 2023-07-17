@@ -12,10 +12,9 @@ const getNews = async ({ id }: any) => {
 };
 
 const Country = async ({ params }: any) => {
+  // const arr = useStore((store: StoreApi<unknown>) => store.arr);
   const news = await getNews(params);
-  console.log(typeof params.id);
 
-  console.log(news);
   const articles = news.articles;
   return (
     <div>
