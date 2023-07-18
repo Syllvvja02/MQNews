@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-interface viewState {
+export interface viewState {
   arr: boolean;
   arrToTiles: () => void;
   tilesToArr: () => void;

@@ -21,25 +21,25 @@ const Navbar = () => {
       <ul className="flex p-0 m-0">
         <li className="space-x-2">
           <Image src={poland} width={10} height={10} alt="Poland flag" />
-          <Link href="">
+          <Link href="/country/pl">
             <p>Poland</p>
           </Link>
         </li>
         <li className="space-x-2">
           <Image src={england} width={10} height={10} alt="England flag" />
-          <Link href="">
+          <Link href="/country/uk">
             <p>England</p>
           </Link>
         </li>
         <li className="space-x-2">
           <Image src={france} width={10} height={10} alt="France flag" />
-          <Link href="">
+          <Link href="/country/fr">
             <p>France</p>
           </Link>
         </li>
         <li className="space-x-2">
           <Image src={germany} width={10} height={10} alt="Germany flag" />
-          <Link href="">
+          <Link href="/country/de">
             <p>Germany</p>
           </Link>
         </li>
