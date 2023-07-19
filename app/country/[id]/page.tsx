@@ -1,4 +1,6 @@
 import { useStore } from "@/app/(store)/store";
+import Lst from "../../../components/List/List";
+import Tiles from "@/components/Tiles/Tiles";
 
 const getNews = async ({ id }: any) => {
   const res = await fetch(
@@ -15,18 +17,19 @@ const getNews = async ({ id }: any) => {
 
 const Country = async ({ params }: any) => {
   const news = await getNews(params);
-  const arr = useStore((store) => store.arr);
 
   const articles = news.articles;
+  console.log("Komponent Country mówi, ze:", typeof articles);
+  console.log(articles.length);
+
+  if (articles.length === 0) return null;
+
   return (
     <div className="content-center px-20 m-20">
       Choosen country is: {params.id}
       <div>
-        <ul>
-          {articles
-            ? articles.map(({ title }: any) => <li key={title}>{title}</li>)
-            : null}
-        </ul>
+        <Lst articles={articles} />
+        <Tiles articles={articles} />
       </div>
     </div>
   );
