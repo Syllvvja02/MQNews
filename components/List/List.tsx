@@ -9,10 +9,11 @@ const Lst = (articles: any) => {
   const news = articles.articles;
   return (
     <div>
-      <p>List</p>
-      <ul>
+      <ul className="list-outside ml-10">
         {news.map(({ title }: any) => (
-          <li key={title}>{title}</li>
+          <li key={title} className="py-2">
+            {title}
+          </li>
         ))}
       </ul>
     </div>
