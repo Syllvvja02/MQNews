@@ -6,9 +6,6 @@ import Tile from "./Tile";
 const Tiles = (articles: any) => {
   const arr = useStore((store) => store.arr);
   const news = articles.articles;
-  console.log("Tiles", articles.articles);
-  console.log("Tiles news", news);
-  console.log("Tiles typeof news:", typeof news.articles);
   if (arr) return null;
   return (
     <div>

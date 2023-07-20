@@ -19,8 +19,7 @@ const Country = async ({ params }: any) => {
   const news = await getNews(params);
 
   const articles = news.articles;
-  console.log("Komponent Country mówi, ze:", typeof articles);
-  console.log(articles.length);
+  useStore.setState({ amount: articles.length });
 
   if (articles.length === 0) return null;
 
