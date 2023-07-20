@@ -19,13 +19,13 @@ const Country = async ({ params }: any) => {
   const news = await getNews(params);
 
   const articles = news.articles;
+  console.log(articles);
   useStore.setState({ amount: articles.length });
 
   if (articles.length === 0) return null;
 
   return (
-    <div className="content-center px-20 m-20">
-      Choosen country is: {params.id}
+    <div className="content-center m-20">
       <div>
         <Lst articles={articles} />
         <Tiles articles={articles} />
