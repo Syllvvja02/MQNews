@@ -1,13 +1,9 @@
 import styles from "./Navbar.module.css";
-import poland from "../../public/flags/poland.svg";
-import england from "../../public/flags/united-kingdom.svg";
-import france from "../../public/flags/france.svg";
-import germany from "../../public/flags/germany.svg";
+
+import Flag from "react-flagkit";
+import Link from "next/link";
 
 import { TiArrowRightOutline } from "react-icons/ti";
-
-import Image from "next/image";
-import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -20,25 +16,25 @@ const Navbar = () => {
       </div>
       <ul className="flex p-0 m-0">
         <li className="space-x-2">
-          <Image src={poland} width={10} height={10} alt="Poland flag" />
+          <Flag country="PL" size={15} />
           <Link href="/country/pl">
             <p>Poland</p>
           </Link>
         </li>
         <li className="space-x-2">
-          <Image src={england} width={10} height={10} alt="England flag" />
+          <Flag country="GB" size={15} />
           <Link href="/country/uk">
             <p>England</p>
           </Link>
         </li>
         <li className="space-x-2">
-          <Image src={france} width={10} height={10} alt="France flag" />
+          <Flag country="FR" size={15} />
           <Link href="/country/fr">
             <p>France</p>
           </Link>
         </li>
         <li className="space-x-2">
-          <Image src={germany} width={10} height={10} alt="Germany flag" />
+          <Flag country="DE" size={15} />
           <Link href="/country/de">
             <p>Germany</p>
           </Link>
