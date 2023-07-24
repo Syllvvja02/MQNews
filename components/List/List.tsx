@@ -5,7 +5,7 @@ import { MdArticle } from "react-icons/md";
 
 import { useState } from "react";
 
-import Modal from "../Modal/Modal";
+// import Modal from "../Modal/Modal";
 
 const Lst = (articles: any) => {
   const [show, setShow] = useState(true);
