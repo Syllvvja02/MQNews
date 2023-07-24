@@ -2,9 +2,11 @@ import { useStore } from "@/app/(store)/store";
 import Lst from "../../../components/List/List";
 import Tiles from "@/components/Tiles/Tiles";
 
+import NEXT_API_KEY from "../../../env.locale";
+
 const getNews = async ({ id }: any) => {
   const res = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=${id}&apiKey=b1c4ac6fc9a84967b2c3c7092e03db3a`,
+    `https://newsapi.org/v2/top-headlines?country=${id}&apiKey=${NEXT_API_KEY}`,
     {
       method: "GET",
       headers: {

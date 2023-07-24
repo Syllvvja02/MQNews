@@ -5,9 +5,11 @@ import { useStore } from "@/app/(store)/store";
 
 const Tiles = (articles: any) => {
   const arr = useStore((store) => store.arr);
+  const setAmount = useStore((store) => store.setAmount);
+
   const news = articles.articles;
-  console.log("News", news[0]);
-  console.log("Typeof News", typeof news);
+  setAmount(news.length);
+
   if (arr) return null;
   return (
     <div>

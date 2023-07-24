@@ -8,8 +8,7 @@ import { useStore } from "../../app/(store)/store";
 const Header: React.FC = () => {
   const arrToTiles = useStore((store) => store.arrToTiles);
   const tilesToArr = useStore((store) => store.tilesToArr);
-  const arr = useStore((store) => store.arr);
-  console.log(arr);
+
   return (
     <header className="ml-6 p-4">
       <div className="grid grid-cols-8 gap-2 m-10">

@@ -3,25 +3,43 @@
 import { useStore } from "@/app/(store)/store";
 import { MdArticle } from "react-icons/md";
 
+import { useState } from "react";
+
+import Modal from "../Modal/Modal";
+
 const Lst = (articles: any) => {
+  const [show, setShow] = useState(true);
+
   const arr = useStore((store) => store.arr);
-  console.log(articles.lenght);
-  if (!arr) return null;
-  if (articles.length === 0) return null;
+  const setAmount = useStore((store) => store.setAmount);
+
   const news = articles.articles;
+  setAmount(news.length);
+  console.log(news.length);
+
+  const s = show ? "hidden" : "";
+  const sT = () => {
+    setShow(!show);
+  };
+
+  if (!arr) return null;
+  if (news === 0) return null;
+
   return (
     <div>
       <ul className="list-outside ml-10">
         {news.map(({ title, author }: any) => (
-          <li key={title} className="py-2 flex items-center">
-            <span>
+          <li key={title} className="py-2 flex items-center" onClick={sT}>
+            <span className="mr-4">
               <MdArticle size={15} />
             </span>
             {title}
-            <div className="">Im a popup of news {author}</div>
           </li>
         ))}
       </ul>
+      {/* <div className={`${s}`}>
+        <Modal title="Anyway" author="Gal Anonim" />
+      </div> */}
     </div>
   );
 };
