@@ -1,0 +1,38 @@
+.navbar {
+  height: 100vh;
+  transition: width 800ms ease-in-out;
+}
+
+.navbar ul {
+  list-style: none;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar li {
+  display: none;
+}
+
+.navbar:hover li {
+  display: flex;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+}
+.arrow p {
+  display: none;
+}
+.navbar:hover .arrow p {
+  display: flex;
+}
+.arrow span {
+  transform: rotate(0deg);
+  transition: 800ms;
+  padding-left: 2rem;
+}
+
+.navbar:hover .arrow span {
+  transform: rotate(-180deg);
+}

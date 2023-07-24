@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 
 const Header: React.FC = () => {
   return (
-    <header>
+    <header className="ml-6 p-4">
       <div className="grid grid-cols-8 gap-2 m-10">
         <div className="col-start-1 col-end-6 py-2">
           <Link href="/">MQNews</Link>
