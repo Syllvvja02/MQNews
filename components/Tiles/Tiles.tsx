@@ -13,6 +13,7 @@ const Tiles = (articles: ArticlesList) => {
     title: "",
     author: "",
     publishedAt: "",
+    close: () => setShow(true),
   });
 
   const arr = useStore((store) => store.arr);
@@ -24,7 +25,12 @@ const Tiles = (articles: ArticlesList) => {
   const s = show ? "hidden" : "";
   const sT = ({ title, author, publishedAt }: Article) => {
     setShow(!show);
-    setData({ title: title, author: author, publishedAt: publishedAt });
+    setData({
+      title: title,
+      author: author,
+      publishedAt: publishedAt,
+      close: () => setShow(true),
+    });
     console.log(data);
   };
   const cls = () => {
@@ -39,7 +45,12 @@ const Tiles = (articles: ArticlesList) => {
           <div
             key={title}
             onClick={() =>
-              sT({ title: title, author: author, publishedAt: publishedAt })
+              sT({
+                title: title,
+                author: author,
+                publishedAt: publishedAt,
+                close: () => setShow(true),
+              })
             }
           >
             <div className="relative m-4 p-2 border-2 border-violet-500 rounded-md h-56 w-56">

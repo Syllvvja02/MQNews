@@ -22,9 +22,45 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="space-x-2">
+          <Flag country="UA" size={15} />
+          <Link href="/country/ua">
+            <p>Ukraine</p>
+          </Link>
+        </li>
+        <li className="space-x-2">
+          <Flag country="LT" size={15} />
+          <Link href="/country/lt">
+            <p>Lithuania</p>
+          </Link>
+        </li>
+        <li className="space-x-2">
           <Flag country="GB" size={15} />
-          <Link href="/country/uk">
+          <Link href="/country/gb">
             <p>England</p>
+          </Link>
+        </li>
+        <li className="space-x-2">
+          <Flag country="BG" size={15} />
+          <Link href="/country/bg">
+            <p>Bulgaria</p>
+          </Link>
+        </li>
+        <li className="space-x-2">
+          <Flag country="BE" size={15} />
+          <Link href="/country/be">
+            <p>Belgium</p>
+          </Link>
+        </li>
+        <li className="space-x-2">
+          <Flag country="CA" size={15} />
+          <Link href="/country/ca">
+            <p>Canada</p>
+          </Link>
+        </li>
+        <li className="space-x-2">
+          <Flag country="EG" size={15} />
+          <Link href="/country/eg">
+            <p>Egypt</p>
           </Link>
         </li>
         <li className="space-x-2">
@@ -37,6 +73,12 @@ const Navbar = () => {
           <Flag country="DE" size={15} />
           <Link href="/country/de">
             <p>Germany</p>
+          </Link>
+        </li>
+        <li className="space-x-2">
+          <Flag country="CN" size={15} />
+          <Link href="/country/cn">
+            <p>China</p>
           </Link>
         </li>
       </ul>

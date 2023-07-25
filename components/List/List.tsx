@@ -14,6 +14,7 @@ const Lst = (articles: ArticlesList) => {
     title: "",
     author: "",
     publishedAt: "",
+    close: () => setShow(false),
   });
 
   const arr = useStore((store) => store.arr);
@@ -25,7 +26,12 @@ const Lst = (articles: ArticlesList) => {
   const s = show ? "hidden" : "";
   const sT = ({ title, author, publishedAt }: Article) => {
     setShow(!show);
-    setData({ title: title, author: author, publishedAt: publishedAt });
+    setData({
+      title: title,
+      author: author,
+      publishedAt: publishedAt,
+      close: () => setShow(true),
+    });
     console.log(data);
   };
   const cls = () => {
@@ -42,7 +48,12 @@ const Lst = (articles: ArticlesList) => {
             key={title}
             className="py-2 flex items-center"
             onClick={() =>
-              sT({ title: title, author: author, publishedAt: publishedAt })
+              sT({
+                title: title,
+                author: author,
+                publishedAt: publishedAt,
+                close: () => setShow(true),
+              })
             }
           >
             <span className="mr-4">
