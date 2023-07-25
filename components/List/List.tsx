@@ -29,6 +29,9 @@ const Lst = (articles: ArticlesList) => {
     setData({ title: title, author: author, publishedAt: publishedAt });
     console.log(data);
   };
+  const cls = () => {
+    setShow(true);
+  };
 
   if (!arr) return null;
 
@@ -56,6 +59,7 @@ const Lst = (articles: ArticlesList) => {
           title={data.title}
           author={data.author}
           publishedAt={data.publishedAt}
+          close={cls}
         />
       </div>
     </div>
