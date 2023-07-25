@@ -21,7 +21,6 @@ const Lst = (articles: ArticlesList) => {
 
   const news = articles.articles;
   setAmount(news.length);
-  console.log(news.length);
 
   const s = show ? "hidden" : "";
   const sT = ({ title, author, publishedAt }: Article) => {
