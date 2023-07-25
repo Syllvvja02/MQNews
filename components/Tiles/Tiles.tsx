@@ -13,7 +13,6 @@ const Tiles = (articles: ArticlesList) => {
     title: "",
     author: "",
     publishedAt: "",
-    close: () => setShow(true),
   });
 
   const arr = useStore((store) => store.arr);
@@ -23,15 +22,14 @@ const Tiles = (articles: ArticlesList) => {
   setAmount(news.length);
 
   const s = show ? "hidden" : "";
+
   const sT = ({ title, author, publishedAt }: Article) => {
     setShow(!show);
     setData({
       title: title,
       author: author,
       publishedAt: publishedAt,
-      close: () => setShow(true),
     });
-    console.log(data);
   };
   const cls = () => {
     setShow(true);
@@ -49,7 +47,6 @@ const Tiles = (articles: ArticlesList) => {
                 title: title,
                 author: author,
                 publishedAt: publishedAt,
-                close: () => setShow(true),
               })
             }
           >

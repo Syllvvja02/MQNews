@@ -14,7 +14,6 @@ const Lst = (articles: ArticlesList) => {
     title: "",
     author: "",
     publishedAt: "",
-    close: () => setShow(false),
   });
 
   const arr = useStore((store) => store.arr);
@@ -25,12 +24,11 @@ const Lst = (articles: ArticlesList) => {
 
   const s = show ? "hidden" : "";
   const sT = ({ title, author, publishedAt }: Article) => {
-    setShow(!show);
+    setShow(false);
     setData({
       title: title,
       author: author,
       publishedAt: publishedAt,
-      close: () => setShow(true),
     });
     console.log(data);
   };
@@ -52,7 +50,6 @@ const Lst = (articles: ArticlesList) => {
                 title: title,
                 author: author,
                 publishedAt: publishedAt,
-                close: () => setShow(true),
               })
             }
           >
