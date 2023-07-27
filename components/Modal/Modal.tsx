@@ -1,6 +1,6 @@
-import { ModalData } from "@/types/types";
+import { ArticleModalData } from "@/types/types";
 
-const Modal = ({ title, author, publishedAt, close }: ModalData) => {
+const Modal = ({ title, author, publishedAt, close }: ArticleModalData) => {
   return (
     <div
       className="fixed inset-0 flex justify-center items-center bg-opacity-25 backdrop-blur-sm"
